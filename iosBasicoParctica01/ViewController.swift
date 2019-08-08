@@ -7,6 +7,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UILabel!
     
+    @IBOutlet weak var imgLogin: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         answerLabel.text = ""
@@ -36,7 +38,10 @@ class ViewController: UIViewController {
             return
         }
         
+        
         showALert(message: "Gracias por ingresar al sistema con el correo\n\(email)")
+        
+        imgLogin.image = UIImage(named : "user_login")
     }
     
     private func showALert(message : String){
